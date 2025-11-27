@@ -43,6 +43,32 @@ nav{background:#ffffff}
 .gallery-img{width:100%;height:200px;object-fit:cover;border-radius:10px;display:block}
 
 /* reviews stars (gold) handled inline SVG */
+.reviews-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+}
+
+.reviews-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.reviews-scroll::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.reviews-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.review-card {
+    min-width: 280px; /* ensures horizontal scroll */
+    scroll-snap-align: start;
+}
+
 
 /* form */
 .form-input,.form-textarea,select{
